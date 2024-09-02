@@ -1,11 +1,13 @@
 spring:
   application:
     name: oauth-v1
+  profiles:
+    active: dev
   datasource:
     driver-class-name: org.postgresql.Driver
-    username: chiso
-    password: chiso
-    url: jdbc:postgresql://localhost:5168/oauth-db
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
   jpa:
     hibernate:
       ddl-auto: create-drop
