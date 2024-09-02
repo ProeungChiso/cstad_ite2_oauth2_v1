@@ -1,0 +1,19 @@
+services:
+  oauth-db:
+    image: postgres:16.4-bullseye
+    container_name: "oauth-db"
+    hostname: "oauth-db-host"
+    ports:
+      - "5168:5432"
+    volumes:
+      - oauth-db-vol:/var/lib/postgresql/data
+    networks:
+      - oauth_net
+    environment:
+      - POSTGRES_USER=chiso
+      - POSTGRES_PASSWORD=chiso
+      - POSTGRES_DB=oauth-db
+volumes:
+  oauth-db-vol:
+networks:
+  oauth_net:
