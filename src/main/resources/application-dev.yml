@@ -1,5 +1,5 @@
-DB_USERNAME: chiso
-DB_PASSWORD: chiso
-DB_PORT: 5168
-DB_NAME: oauth-db
+DB_USERNAME: postgres
+DB_PASSWORD: 1234
+DB_PORT: 5432
+DB_NAME: oauth2
 DB_HOST: localhost
